@@ -9,7 +9,7 @@ type Beer struct {
 	Name    string
 	Brewery string
 	ABV     string
-	rating  string
+	Rating  string
 }
 
 type BeerRepository interface {

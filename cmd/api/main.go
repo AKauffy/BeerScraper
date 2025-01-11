@@ -32,12 +32,12 @@ func main() {
 
 		rating := list.ChildText("span.num")
 
-		beers = append(beers, models.Beer{Name: name, Brewery: brewery, ABV: abv, rating: rating})
+		beers = append(beers, models.Beer{Name: name, Brewery: brewery, ABV: abv, Rating: rating})
 	})
 
 	c.OnScraped(func(r *colly.Response) {
 		for _, beer := range beers {
-			fmt.Printf("Name: %s, Brewery: %s, ABV: %s, rating: %s\n", beer.Name, beer.Brewery, beer.ABV, beer.rating)
+			fmt.Printf("Name: %s, Brewery: %s, ABV: %s, rating: %s\n", beer.Name, beer.Brewery, beer.ABV, beer.Rating)
 		}
 	})
 
