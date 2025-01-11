@@ -3,6 +3,7 @@ module beerscraper
 go 1.23.4
 
 require (
+	github.com/AKauffy/BeerScraper/models v0.0.0-20250111170127-174eaf502861 // indirect
 	github.com/PuerkitoBio/goquery v1.10.1 // indirect
 	github.com/andybalholm/cascadia v1.3.3 // indirect
 	github.com/antchfx/htmlquery v1.3.4 // indirect

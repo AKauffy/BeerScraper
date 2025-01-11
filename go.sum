@@ -1,3 +1,5 @@
+github.com/AKauffy/BeerScraper/models v0.0.0-20250111170127-174eaf502861 h1:vcixi0t7GLBgjw4d8Wf4Yiy1XW/gUEinqTm+8kjvUHQ=
+github.com/AKauffy/BeerScraper/models v0.0.0-20250111170127-174eaf502861/go.mod h1:pFRwfG2ehqSbAYVRSf+FlAUPY1/2eQR2aw24RzsB5Gs=
 github.com/PuerkitoBio/goquery v1.10.1 h1:Y8JGYUkXWTGRB6Ars3+j3kN0xg1YqqlwvdTV8WTFQcU=
 github.com/PuerkitoBio/goquery v1.10.1/go.mod h1:IYiHrOMps66ag56LEH7QYDDupKXyo5A8qrjIx3ZtujY=
 github.com/andybalholm/cascadia v1.3.3 h1:AG2YHrzJIm4BZ19iwJ/DAua6Btl3IwJX+VI4kktS1LM=

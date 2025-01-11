@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/AKauffy/BeerScraper/models"
+
 	"github.com/gocolly/colly"
 )
 
@@ -11,7 +13,7 @@ func main() {
 
 	c := colly.NewCollector(colly.AllowedDomains("https://untappd.com/", "untappd.com"))
 
-	var beers []Beer
+	var beers []models.Beer
 
 	c.OnRequest(func(r *colly.Request) {
 		fmt.Printf("Visiting %s\n", r.URL)
@@ -30,7 +32,7 @@ func main() {
 
 		rating := list.ChildText("span.num")
 
-		beers = append(beers, Beer{Name: name, Brewery: brewery, ABV: abv, rating: rating})
+		beers = append(beers, models.Beer{Name: name, Brewery: brewery, ABV: abv, rating: rating})
 	})
 
 	c.OnScraped(func(r *colly.Response) {
