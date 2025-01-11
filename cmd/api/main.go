@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	"regexp"
+
 	"github.com/AKauffy/BeerScraper/models"
 
 	"github.com/gocolly/colly"
@@ -32,7 +34,7 @@ func main() {
 
 		rating := list.ChildText("span.num")
 
-		beers = append(beers, models.Beer{Name: name, Brewery: brewery, ABV: abv, Rating: rating})
+		beers = append(beers, models.Beer{Name: name, Brewery: brewery, ABV: abv, Rating: cleanRating(rating)})
 	})
 
 	c.OnScraped(func(r *colly.Response) {
@@ -42,4 +44,9 @@ func main() {
 	})
 
 	c.Visit(scapeURL)
+}
+
+func cleanRating(rating string) string {
+	noParentheses := regexp.MustCompile(`[()]`).ReplaceAllString(rating, "")
+	return noParentheses
 }
