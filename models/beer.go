@@ -13,7 +13,5 @@ type Beer struct {
 }
 
 type BeerRepository interface {
-	GetMany(ctx context.Context) ([]*Beer, error)
-	GetOne(ctx context.Context, beerID string) (*Beer, error)
-	CreateOne(ctx context.Context, Beer Beer) (*Beer, error)
+	GetSearchBeer(ctx context.Context, searchString string) ([]Beer, error)
 }
