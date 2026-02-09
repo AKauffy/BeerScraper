@@ -5,7 +5,7 @@ go 1.23.4
 require (
 	github.com/AKauffy/BeerScraper/models v0.0.0-20250111170127-174eaf502861
 	github.com/gocolly/colly v1.2.0
-	github.com/gofiber/fiber/v2 v2.52.6
+	github.com/gofiber/fiber/v2 v2.52.11
 )
 
 replace github.com/AKauffy/BeerScraper/models => ./models
